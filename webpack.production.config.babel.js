@@ -11,9 +11,6 @@ module.exports = {
     filename: 'bundle.js'
   },
   plugins: [
-    new ExtractTextPlugin('styles.css', {
-      allChunks: true
-    }),
     new webpack.ProvidePlugin({
       /*===== yeoman provide plugin hook =====*/
       m: 'mithril'
@@ -40,7 +37,7 @@ module.exports = {
       // SASS compiler
       {
         test: /\.scss$/,
-        loader: ExtractTextPlugin.extract('css!sass')
+        loader: 'style!css!sass'
       },
       /*===== yeoman sass hook end =====*/
       // Static files
