@@ -1,6 +1,5 @@
 var path = require('path');
 var webpack = require('webpack');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = {
   entry: [
@@ -11,28 +10,22 @@ module.exports = {
     path: path.join(__dirname, 'build'),
     filename: 'bundle.js'
   },
-  resolve: {
-    root: [path.join(__dirname, 'bower_components')]
-  },
   plugins: [
-    new webpack.ResolverPlugin(
-      new webpack.ResolverPlugin.DirectoryDescriptionFilePlugin('bower.json', ['main'])
-    ),
     new ExtractTextPlugin('styles.css', {
-            allChunks: true
-        }),
-        new webpack.ProvidePlugin({
-          /*===== yeoman provide plugin hook =====*/
-          m: 'mithril'
-        }),
-        new webpack.optimize.DedupePlugin(),
-        new webpack.optimize.OccurenceOrderPlugin(true),
-        new webpack.optimize.UglifyJsPlugin({
-          sourceMap: true,
-        mangle: true,
-        compress: {
-            warnings: false
-        }
+      allChunks: true
+    }),
+    new webpack.ProvidePlugin({
+      /*===== yeoman provide plugin hook =====*/
+      m: 'mithril'
+    }),
+    new webpack.optimize.DedupePlugin(),
+    new webpack.optimize.OccurenceOrderPlugin(true),
+    new webpack.optimize.UglifyJsPlugin({
+      sourceMap: true,
+      mangle: true,
+      compress: {
+        warnings: false
+      }
     })
   ],
   module: {
