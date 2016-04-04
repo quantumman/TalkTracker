@@ -29,7 +29,7 @@ module.exports = {
     loaders: [
       // ES6 transpiler
       {
-        test: /\.js$/,
+        test: /\.jsx?$/,
         loader: 'babel',
         exclude: /(node_modules|bower_components)/
       },
