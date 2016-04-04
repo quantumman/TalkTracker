@@ -3,17 +3,15 @@ import webpack from 'webpack';
 
 module.exports = {
   entry: [
-    /*===== yeoman entry hook =====*/
-    './src/index.js'
+    './src/index.js',
   ],
   output: {
     path: path.join(__dirname, 'build'),
-    filename: 'bundle.js'
+    filename: 'bundle.js',
   },
   plugins: [
     new webpack.ProvidePlugin({
-      /*===== yeoman provide plugin hook =====*/
-      m: 'mithril'
+      m: 'mithril',
     }),
     new webpack.optimize.DedupePlugin(),
     new webpack.optimize.OccurenceOrderPlugin(true),
@@ -21,9 +19,9 @@ module.exports = {
       sourceMap: true,
       mangle: true,
       compress: {
-        warnings: false
-      }
-    })
+        warnings: false,
+      },
+    }),
   ],
   module: {
     loaders: [
@@ -31,31 +29,44 @@ module.exports = {
       {
         test: /\.jsx?$/,
         loader: 'babel',
-        exclude: /(node_modules|bower_components)/
+        exclude: /(node_modules|bower_components)/,
       },
-      /*===== yeoman sass hook start =====*/
       // SASS compiler
       {
         test: /\.scss$/,
-        loader: 'style!css!sass'
+        loader: 'style!css!sass',
       },
-      /*===== yeoman sass hook end =====*/
       // Static files
       {
         test: /\.html$/,
-        loader: 'static'
+        loader: 'static',
       },
       // Image files
       {
         test: /\.(png|jpg|gif)$/,
-        loader: 'url?limit=8192'
+        loader: 'url?limit=8192',
       },
       // Font files
-      { test: /\.woff(\?v=\d+\.\d+\.\d+)?$/,   loader: "url?limit=10000&mimetype=application/font-woff" },
-      { test: /\.woff2(\?v=\d+\.\d+\.\d+)?$/,  loader: "url?limit=10000&mimetype=application/font-woff" },
-      { test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/,    loader: "url?limit=10000&mimetype=application/octet-stream" },
-      { test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,    loader: "file" },
-      { test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,    loader: "url?limit=10000&mimetype=image/svg+xml" }
-    ]
-  }
-}
+      {
+        test: /\.woff(\?v=\d+\.\d+\.\d+)?$/,
+        loader: 'url?limit=10000&mimetype=application/font-woff',
+      },
+      {
+        test: /\.woff2(\?v=\d+\.\d+\.\d+)?$/,
+        loader: 'url?limit=10000&mimetype=application/font-woff',
+      },
+      {
+        test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/,
+        loader: 'url?limit=10000&mimetype=application/octet-stream',
+      },
+      {
+        test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,
+        loader: 'file',
+      },
+      {
+        test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
+        loader: 'url?limit=10000&mimetype=image/svg+xml',
+      },
+    ],
+  },
+};
