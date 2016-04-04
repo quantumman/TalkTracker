@@ -15,6 +15,13 @@ module.exports = {
     }),
   ],
   module: {
+    preLoaders: [
+      {
+        test: /\.jsx?$/,
+        loader: 'eslint',
+        exclude: /(node_modules|bower_components)/,
+      },
+    ],
     loaders: [
       // ES6 transpiler
       {
