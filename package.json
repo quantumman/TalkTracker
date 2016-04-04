@@ -1,14 +1,14 @@
 {
   "name": "TalkTracker",
   "version": "0.0.1",
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "babel-core": "^6.7.4",
     "babel-loader": "^6.2.4",
     "css-loader": "^0.23.1",
-    "file-loader": "^0.8.4",
+    "eslint": "^2.6.0",
     "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "^0.8.4",
     "node-sass": "^3.3.3",
     "sass-loader": "^3.0.0",
     "static-loader": "^0.1.8",
