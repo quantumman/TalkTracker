@@ -14,6 +14,9 @@ module.exports = {
       m: 'mithril',
     }),
   ],
+  resolve: {
+    extensions: ['', '.js', '.jsx'],
+  },
   devServer: {
     proxy: {
       '/api/v1/*': {
