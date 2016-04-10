@@ -35,6 +35,9 @@
     "mock": "api-mock TalkTracker.API/apiary.apib"
   },
   "babel": {
+    "presets": [
+      "es2015"
+    ],
     "plugins": [
       "mjsx"
     ]
