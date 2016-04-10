@@ -17,6 +17,21 @@ module.exports = {
       m: 'mithril',
     }),
   ],
+  devServer: {
+    proxy: {
+      '/api/v1/*': {
+        target: 'http://localhost:3000/',
+        secure: false,
+        rewrite: (req) => {
+          req.url = req.url.replace(/\/api\/v1/, ''); // eslint-disable-line no-param-reassign
+        },
+      },
+      '/assets/*': {
+        target: 'http://localhost:3000/',
+        secure: false,
+      },
+    },
+  },
   module: {
     preLoaders: [
       {
