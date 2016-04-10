@@ -12,6 +12,7 @@ module.exports = {
   plugins: [
     new webpack.ProvidePlugin({
       m: 'mithril',
+      jQuery: 'jquery',
     }),
   ],
   resolve: {

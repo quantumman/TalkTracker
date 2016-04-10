@@ -12,6 +12,7 @@ module.exports = {
   plugins: [
     new webpack.ProvidePlugin({
       m: 'mithril',
+      jQuery: 'jquery',
     }),
     new webpack.optimize.DedupePlugin(),
     new webpack.optimize.OccurenceOrderPlugin(true),
