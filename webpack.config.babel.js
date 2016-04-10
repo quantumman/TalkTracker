@@ -34,7 +34,7 @@ module.exports = {
       {
         test: /\.jsx?$/,
         loader: 'eslint',
-        exclude: /(node_modules|bower_components)/,
+        exclude: /(node_modules|bower_components|semantic)/,
       },
     ],
     loaders: [
