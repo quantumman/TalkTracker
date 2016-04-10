@@ -33,5 +33,10 @@
     "deploy": "webpack -p --config webpack.production.config.js",
     "dev-server": "npm run mock & webpack-dev-server --content-base=build/ --inline",
     "mock": "api-mock TalkTracker.API/apiary.apib"
+  },
+  "babel": {
+    "plugins": [
+      "mjsx"
+    ]
   }
 }
