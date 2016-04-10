@@ -28,7 +28,7 @@
     "postinstall": "cd semantic/ ; gulp build",
     "build": "webpack",
     "deploy": "webpack -p --config webpack.production.config.js",
-    "dev-server": "webpack && webpack-dev-server --content-base=build/ --inline",
+    "dev-server": "npm run mock & webpack-dev-server --content-base=build/ --inline",
     "mock": "api-mock TalkTracker.API/apiary.apib"
   }
 }
