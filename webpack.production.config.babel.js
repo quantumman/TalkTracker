@@ -9,9 +9,6 @@ module.exports = {
     path: path.join(__dirname, 'build'),
     filename: 'bundle.js',
   },
-  resolve: {
-    moduleDirectories: ['node_modules', __dirname + '/semantic/dist'],
-  },
   plugins: [
     new webpack.ProvidePlugin({
       m: 'mithril',
