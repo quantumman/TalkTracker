@@ -22,7 +22,7 @@ export default {
   view(ctrl, props, children) {
     return (
       <div class="nav">
-        <div class="ui small menu">
+        <div class="ui top fixed small menu">
           <div class="ui pointing dropdown item" config={ctrl.config}>
             Projects <i class="dropdown icon"></i>
             <div class="menu">
