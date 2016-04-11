@@ -4,12 +4,34 @@ import Container from '../Container';
 
 export default {
   controller() {
+    return {
+      config: (element, isInitialized) => {
+        if (isInitialized) {
+          $(element).dropdown('refresh');
+        } else {
+          $(element).dropdown();
+        }
+      },
+
+      onunload: () => {
+        $('.ui.dropdown').destory();
+      },
+    };
   },
 
-  view(_ctrl, props, children) {
+  view(ctrl, props, children) {
     return (
       <div class="nav">
         <div class="ui small menu">
+          <div class="ui pointing dropdown item" config={ctrl.config}>
+            Projects <i class="dropdown icon"></i>
+            <div class="menu">
+              {
+                props.projects()
+                     .map(p => <div class="item">{p.name}</div>)
+              }
+            </div>
+          </div>
           <div class="right menu">
             <div class="item">
               <div class="ui icon input">
