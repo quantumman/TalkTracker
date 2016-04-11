@@ -42,7 +42,9 @@ export default {
           </div>
         </div>
         <Container>
-          {children}
+          <div class="content">
+            {children}
+          </div>
         </Container>
       </div>
     );
