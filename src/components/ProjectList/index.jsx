@@ -1,13 +1,17 @@
 import './style.scss';
 
+import BasePage from '../BasePage';
+
 export default {
   controller() {
   },
 
-  view() {
+  view(_ctrl, props) {
     return (
-      <div class="project-list">
-      </div>
+      <BasePage {...props}>
+        <div class="project-list">
+        </div>
+      </BasePage>
     );
   },
 };
