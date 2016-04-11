@@ -9,7 +9,7 @@ export default {
   view(_ctrl, _props, children) {
     return (
       <div class="nav">
-        <div class="ui menu">
+        <div class="ui small menu">
         </div>
         <Container>
           {children}
