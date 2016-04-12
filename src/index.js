@@ -11,10 +11,10 @@ import SettingPage from './components/SettingPage';
 
 const routes = {
   '/': ProjectsPage,
-  '/activity': ActivityPage,
-  '/messages': MessagesPage,
-  '/tasks': TasksPage,
-  '/setting': SettingPage,
+  '/:project_id/activity': ActivityPage,
+  '/:project_id/messages': MessagesPage,
+  '/:project_id/tasks': TasksPage,
+  '/:project_id/setting': SettingPage,
 };
 
 m.route(document.body, '/', routes);
