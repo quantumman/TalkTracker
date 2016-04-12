@@ -1,4 +1,4 @@
-import ProjectList from '../ProjectList';
+import ProjectsPage from '../ProjectsPage';
 
 import AuthenticatedUser from '../../models/AuthenticatedUser';
 import Project from '../../models/Project';
@@ -14,7 +14,7 @@ export default {
   view(ctrl) {
     return (
       <div>
-        <ProjectList {...ctrl} />
+        <ProjectsPage {...ctrl} />
       </div>
     );
   },

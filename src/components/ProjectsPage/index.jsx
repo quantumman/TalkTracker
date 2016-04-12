@@ -9,7 +9,7 @@ export default {
   view(_ctrl, props) {
     return (
       <BasePage {...props}>
-        <div class="project-list">
+        <div class="projects-page">
         </div>
       </BasePage>
     );
