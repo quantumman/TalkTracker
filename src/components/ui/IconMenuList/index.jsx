@@ -8,7 +8,9 @@ export default {
     return (
       <div class="icon-menu-list">
         <div class="ui vertical labeled icon menu">
-          <a class="item">
+          <a class="item"
+             href="/activity"
+             config={m.route}>
             <i class="line chart icon"></i>
             Activity
           </a>
