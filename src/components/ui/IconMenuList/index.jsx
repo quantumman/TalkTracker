@@ -26,7 +26,9 @@ export default {
             <i class="tasks icon"></i>
             Tasks
           </a>
-          <a class="item">
+          <a class="item"
+             href="/setting"
+             config={m.route}>
             <i class="setting icon"></i>
             Setting
           </a>
