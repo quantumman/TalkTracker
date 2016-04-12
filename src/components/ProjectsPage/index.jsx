@@ -14,7 +14,7 @@ export default {
 
   view(ctrl) {
     return (
-      <BasePage {...ctrl}>
+      <BasePage {...ctrl} hideIconMenuList={true}>
         <div class="projects-page">
         </div>
       </BasePage>
