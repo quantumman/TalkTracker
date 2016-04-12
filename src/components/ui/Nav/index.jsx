@@ -12,10 +12,6 @@ export default {
           $(element).dropdown();
         }
       },
-
-      onunload: () => {
-        $('.ui.dropdown').destory();
-      },
     };
   },
 
