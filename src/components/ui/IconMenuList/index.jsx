@@ -14,7 +14,9 @@ export default {
             <i class="line chart icon"></i>
             Activity
           </a>
-          <a class="item">
+          <a class="item"
+             href="/messages"
+             config={m.route}>
             <i class="comment icon"></i>
             Messages
           </a>
