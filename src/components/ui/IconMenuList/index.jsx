@@ -20,7 +20,9 @@ export default {
             <i class="comment icon"></i>
             Messages
           </a>
-          <a class="item">
+          <a class="item"
+             href="/tasks"
+             config={m.route}>
             <i class="tasks icon"></i>
             Tasks
           </a>
