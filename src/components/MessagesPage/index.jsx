@@ -2,13 +2,19 @@ import './style.scss';
 
 import BasePage from '../BasePage';
 
+import BaseViewModel from '../BaseViewModel';
+
+class ViewModel extends BaseViewModel {
+}
+
 export default {
   controller() {
+    return new ViewModel();
   },
 
-  view(_ctrl, props) {
+  view(ctrl) {
     return (
-      <BasePage {...props}>
+      <BasePage {...ctrl}>
         <div class="messages-page">
         </div>
       </BasePage>
