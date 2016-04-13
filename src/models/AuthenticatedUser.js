@@ -10,6 +10,6 @@ export default {
     });
   },
   get() {
-    return m.request({ method: 'GET', url: 'api/v1/user' });
+    return m.request({ method: 'GET', url: 'api/v1/user', initialValue: {} });
   },
 };
