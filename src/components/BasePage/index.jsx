@@ -11,7 +11,11 @@ export default {
     return (
       <div class="base-page">
         <Nav {...props}>
-          <IconMenuList {...props} />
+          {
+            props.hideIconMenuList
+            ? <span />
+            : <IconMenuList {...props} />
+          }
           {children}
         </Nav>
       </div>

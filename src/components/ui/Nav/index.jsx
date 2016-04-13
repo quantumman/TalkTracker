@@ -50,7 +50,7 @@ export default {
           </div>
         </div>
         <Container>
-          <div class="content">
+          <div class="children">
             {children}
           </div>
         </Container>

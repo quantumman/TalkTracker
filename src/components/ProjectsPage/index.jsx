@@ -1,6 +1,7 @@
 import './style.scss';
 
 import BasePage from '../BasePage';
+import ProjectCard from '../ui/ProjectCard';
 
 import BaseViewModel from '../BaseViewModel';
 
@@ -14,8 +15,13 @@ export default {
 
   view(ctrl) {
     return (
-      <BasePage {...ctrl}>
+      <BasePage {...ctrl} hideIconMenuList={true}>
         <div class="projects-page">
+          {
+            ctrl.projects().map(p =>
+              <ProjectCard {...p} />
+            )
+          }
         </div>
       </BasePage>
     );
