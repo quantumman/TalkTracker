@@ -5,6 +5,12 @@ import Container from '../Container';
 export default {
   controller() {
     return {
+      active: p => { // eslint-disable-line arrow-body-style
+        return p.id.toString() === m.route.param('project_id')
+        ? 'active'
+        : '';
+      },
+
       config: (element, isInitialized) => {
         if (isInitialized) {
           $(element).dropdown('refresh');
@@ -24,7 +30,9 @@ export default {
             <div class="menu">
               {
                 props.projects()
-                     .map(p => <div class="item">{p.name}</div>)
+                     .map(p =>
+                       <div class={`item ${ctrl.active(p)}`}>{p.name}</div>
+                     )
               }
             </div>
           </div>
