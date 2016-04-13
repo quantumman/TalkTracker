@@ -5,14 +5,14 @@ import '../semantic/dist/semantic.min.js';
 
 import ProjectsPageContainer from './components/ProjectsPageContainer';
 import ActivityPage from './components/ActivityPage';
-import MessagesPageContainer from './components/ActivityPageContainer';
+import MessagesPage from './components/ActivityPage';
 import TasksPageContainer from './components/TasksPageContainer';
 import SettingPageContainer from './components/SettingPageContainer';
 
 const routes = {
   '/': ProjectsPageContainer,
   '/activity': ActivityPage,
-  '/messages': MessagesPageContainer,
+  '/messages': MessagesPage,
   '/tasks': TasksPageContainer,
   '/setting': SettingPageContainer,
 };
