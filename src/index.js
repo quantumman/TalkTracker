@@ -7,14 +7,14 @@ import ProjectsPageContainer from './components/ProjectsPageContainer';
 import ActivityPage from './components/ActivityPage';
 import MessagesPage from './components/ActivityPage';
 import TasksPage from './components/TasksPage';
-import SettingPageContainer from './components/SettingPageContainer';
+import SettingPage from './components/SettingPage';
 
 const routes = {
   '/': ProjectsPageContainer,
   '/activity': ActivityPage,
   '/messages': MessagesPage,
   '/tasks': TasksPage,
-  '/setting': SettingPageContainer,
+  '/setting': SettingPage,
 };
 
 m.route(document.body, '/', routes);
