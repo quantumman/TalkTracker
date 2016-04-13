@@ -1,5 +1,22 @@
 import './style.scss';
 
+const Anchor = {
+  view(ctrl, props, children) {
+    const link = `/${props.current().id}/${props.action}`;
+    const active = m.route() === link
+                 ? 'active'
+                 : '';
+    return (
+      <a class={`item ${active}`}
+         href={link}
+         config={m.route}>
+        {children}
+        {props.label}
+      </a>
+    );
+  },
+};
+
 export default {
   controller() {
   },
