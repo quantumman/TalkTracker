@@ -15,7 +15,7 @@ export default {
   view(ctrl) {
     return (
       <BasePage {...ctrl}>
-        <div class="activity-page">
+        <div class="projects-page">
         </div>
       </BasePage>
     );
