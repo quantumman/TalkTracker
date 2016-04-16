@@ -68,8 +68,31 @@ export default {
   },
 
   view(ctrl, props) {
+    const previousButton =
+      ctrl.page <= 1
+      ? <div class="item disabled">Previous</div>
+      : (
+        <a class="item"
+           href={`${props.href}?page=${ctrl.page - 1}`}
+           config={m.route}>
+          Previous
+        </a>
+      );
+
+    const nextButton =
+      ctrl.page >= props.link.last.page
+      ? <div class="item disabled">Next</div>
+      : (
+        <a class="item"
+           href={`${props.href}?page=${ctrl.page + 1}`}
+           config={m.route}>
+          Next
+        </a>
+      );
+
     return (
       <div class="ui pagination menu">
+        {previousButton}
         {
           ctrl.pageNumbers.map(n => {
             const active = n === ctrl.page ? 'active' : '';
@@ -86,6 +109,7 @@ export default {
                  );
           })
         }
+        {nextButton}
       </div>
     );
   },
