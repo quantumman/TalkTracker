@@ -15,6 +15,10 @@ class ViewModel {
   }
 
   buildPageNumbers(page, lastpage) {
+    if (lastpage < 10) {
+      return range(1, lastpage + 1);
+    }
+
     // [1]  2   3  ...  10
     if (page === 1) {
       return [1, 2, 3, '...', lastpage];
