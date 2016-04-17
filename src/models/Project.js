@@ -19,7 +19,6 @@ export default {
   retrieve() {
     return m.request({ method: 'GET', url: this.url, initialValue: [] })
             .then(ps => ps.map(p => {
-              this.events(p);
               p.events = this.events(p); // eslint-disable-line no-param-reassign
               return p;
             }));
