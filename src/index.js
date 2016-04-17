@@ -5,7 +5,7 @@ import '../semantic/dist/semantic.min.js';
 
 import ProjectsPage from './components/ProjectsPage';
 import ActivityPage from './components/ActivityPage';
-import MessagesPage from './components/ActivityPage';
+import MessagesPage from './components/MessagesPage';
 import TasksPage from './components/TasksPage';
 import SettingPage from './components/SettingPage';
 
