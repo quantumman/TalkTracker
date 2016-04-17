@@ -2,6 +2,7 @@ import './style.scss';
 
 import BasePage from '../BasePage';
 import Pagination from '../ui/Pagination';
+import Time from '../ui/HumanReadableRelativeTime';
 
 import Project from '../../models/Project';
 
@@ -36,6 +37,23 @@ export default {
         <div class="messages-page">
           <div class="ui grid">
             <div class="column">
+              <div class="ui list">
+                {
+                  ctrl.messages().data.map(message =>
+                    <a class="item" key={m.id}>
+                      <img class="ui avatar image" src={message.creator.avatar} />
+                      <div class="content">
+                        <div class="header">
+                          {message.title}
+                        </div>
+                        <div class="description">
+                          {message.creator.name} posted <Time value={message.created_at}></Time>
+                        </div>
+                      </div>
+                    </a>
+                  )
+                }
+              </div>
             </div>
           </div>
           <div class="ui two column centered grid">
