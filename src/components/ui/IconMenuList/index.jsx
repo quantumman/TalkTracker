@@ -3,7 +3,7 @@ import './style.scss';
 const Anchor = {
   view(ctrl, props, children) {
     const link = `/${props.current().id}/${props.action}`;
-    const active = m.route() === link
+    const active = m.route().startsWith(link)
                  ? 'active'
                  : '';
     return (
