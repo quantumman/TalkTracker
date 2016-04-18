@@ -15,9 +15,10 @@ export default {
     };
   },
 
-  view() {
+  view(ctrl, { value }) {
     return (
       <span>
+        {ctrl.fromNow(value)}
       </span>
     );
   },
