@@ -1,7 +1,9 @@
 import moment from 'moment';
 
 export default {
-  controller() {
+  controller({ locale = 'en' }) {
+    moment.locale(locale);
+
     return {
       fromNow(time) {
         const now = moment.utc();
