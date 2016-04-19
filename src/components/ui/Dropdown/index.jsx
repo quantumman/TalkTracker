@@ -1,10 +1,15 @@
 export default {
-  controller() {
+  controller(props) {
+    return {
+      label: props.label,
+    };
   },
 
-  view() {
+  view(ctrl) {
     return (
-      <div>
+      <div class="ui floating pointing dropdown labeled icon button">
+        <i class="filter icon"></i>
+        <span class="text">{ctrl.label}</span>
       </div>
     );
   },
