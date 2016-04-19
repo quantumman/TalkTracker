@@ -3,6 +3,8 @@ import './style.scss';
 import BasePage from '../BasePage';
 import Pagination from '../ui/Pagination';
 import Time from '../ui/HumanReadableRelativeTime';
+import Dropdown from '../ui/Dropdown';
+import Item from '../ui/Item';
 
 import Project from '../../models/Project';
 
@@ -20,6 +22,9 @@ class ViewModel extends BaseViewModel {
     this.messages = this.current
                         .then(p => Project.messages(p, this.pageNumber))
                         .then(this.messages);
+    this.param = {
+      t: m.route.param('t'),
+    };
   }
 }
 
@@ -37,7 +42,21 @@ export default {
         <div class="messages-page">
           <div class="ui grid">
             <div class="column">
-              <div class="ui list">
+              <div class="ui top attached menu">
+                <div class="right menu">
+                  <a class="ui item">
+                    <Dropdown label="Tags"
+                              placeholder="Search Tags..."
+                              value={ctrl.param.t}
+                    >
+                      <Item text="Important" color="red" />
+                      <Item text="Text" color="green" />
+                    </Dropdown>
+                  </a>
+                </div>
+              </div>
+
+              <div class="ui list relaxed divided segment bottom attached">
                 {
                   ctrl.messages().data.map(message =>
                     <a class="item" key={m.id}>
