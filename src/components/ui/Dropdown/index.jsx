@@ -24,6 +24,11 @@ export default {
             <i class="search icon"></i>
             <input type="text" placeholder={ctrl.placeholder} />
           </div>
+          <div class="divider"></div>
+          <div class="header">
+            <i class={`${ctrl.header.icon} icon`}></i>
+            {ctrl.header.title}
+          </div>
         </div>
       </div>
     );
