@@ -14,7 +14,7 @@ export default {
     };
   },
 
-  view(ctrl) {
+  view(ctrl, props, children) {
     return (
       <div class="ui floating pointing dropdown labeled icon button" config={ctrl.config}>
         <i class="filter icon"></i>
@@ -24,10 +24,8 @@ export default {
             <i class="search icon"></i>
             <input type="text" placeholder={ctrl.placeholder} />
           </div>
-          <div class="divider"></div>
-          <div class="header">
-            <i class={`${ctrl.header.icon} icon`}></i>
-            {ctrl.header.title}
+          <div class="scrolling menu">
+            {children}
           </div>
         </div>
       </div>
