@@ -1,7 +1,8 @@
 export default {
   controller(props) {
+    const value = props.value || props.text;
     return {
-      value: props.value,
+      value,
       text: props.text,
       color: props.color,
     };
