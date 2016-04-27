@@ -61,6 +61,7 @@ export default {
               <Pagination page={ctrl.pageNumber}
                           link={ctrl.messages().link}
                           href={`/${ctrl.current().id}/messages`}
+                          param={ctrl.param}
               >
               </Pagination>
             </div>
