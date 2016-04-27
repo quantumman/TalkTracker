@@ -15,7 +15,6 @@ import BaseViewModel from '../BaseViewModel';
 class ViewModel extends BaseViewModel {
   constructor() {
     super();
-    this.onChangeTagFilter.bind(this);
 
     this.pageNumber = m.prop(1);
   }
@@ -31,7 +30,7 @@ class ViewModel extends BaseViewModel {
   }
 
   onChangeTagFilter(value, _text, _$choice) {
-    const param = assign({}, this.param, { page: 1 });
+    const param = assign({}, m.route.param(), { page: 1, t: value });
     const route = m.route();
     m.route(route, param);
   }
@@ -57,6 +56,7 @@ export default {
                     <Dropdown label="Tags"
                               placeholder="Search Tags..."
                               value={ctrl.param.t}
+                              onchange={ctrl.onChangeTagFilter}
                     >
                       <Item text="Important" color="red" />
                       <Item text="Text" color="green" />
