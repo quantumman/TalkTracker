@@ -79,7 +79,7 @@ export default {
       ? <div class="item disabled">Previous</div>
       : (
         <a class="item"
-           href={`${props.href}?page=${ctrl.page - 1}`}
+           href={buildLink(props.href, ctrl.page - 1, props.param)}
            config={m.route}>
           Previous
         </a>
@@ -90,7 +90,7 @@ export default {
       ? <div class="item disabled">Next</div>
       : (
         <a class="item"
-           href={`${props.href}?page=${ctrl.page + 1}`}
+           href={buildLink(props.href, ctrl.page + 1, props.param)}
            config={m.route}>
           Next
         </a>
@@ -107,7 +107,7 @@ export default {
                  ? <div class="item disabled">{n}</div>
                  : (
                    <a class={`${active}  item`}
-                      href={`${props.href}?page=${n}`}
+                      href={buildLink(props.href, n, props.param)}
                       config={m.route}
                    >
                      {n}
