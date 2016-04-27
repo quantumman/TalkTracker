@@ -7,9 +7,9 @@ export default {
 
       config: (element, isInitialized) => {
         if (isInitialized) {
-          $(element).dropdown('refresh');
+          $(element).dropdown('refresh', { onChange: props.onchange });
         } else {
-          $(element).dropdown();
+          $(element).dropdown({ onChange: props.onchange });
         }
       },
     };
