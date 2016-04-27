@@ -1,5 +1,7 @@
 import './style.scss';
 
+import assign from 'object-assign';
+
 import BasePage from '../BasePage';
 import Pagination from '../ui/Pagination';
 import Time from '../ui/HumanReadableRelativeTime';
@@ -13,6 +15,7 @@ import BaseViewModel from '../BaseViewModel';
 class ViewModel extends BaseViewModel {
   constructor() {
     super();
+    this.onChangeTagFilter.bind(this);
 
     this.pageNumber = m.prop(1);
   }
@@ -25,6 +28,12 @@ class ViewModel extends BaseViewModel {
     this.param = {
       t: m.route.param('t'),
     };
+  }
+
+  onChangeTagFilter(value, _text, _$choice) {
+    const param = assign({}, this.param, { page: 1 });
+    const route = m.route();
+    m.route(route, param);
   }
 }
 
