@@ -8,6 +8,12 @@ function range(start, last) {
   return array;
 }
 
+function buildLink(href, page, params = {}) {
+  params.page = page; // eslint-disable-line no-param-reassign
+  const queryString = m.route.buildQueryString(params);
+  return `${href}?${queryString}`;
+}
+
 class ViewModel {
   constructor({ page, link }) {
     this.page = page();
