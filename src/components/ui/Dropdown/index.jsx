@@ -3,6 +3,7 @@ export default {
     return {
       label: props.label,
       placeholder: props.placeholder || '',
+      name: props.name,
 
       config: (element, isInitialized) => {
         if (isInitialized) {
@@ -17,6 +18,7 @@ export default {
   view(ctrl, props, children) {
     return (
       <div class="ui floating pointing dropdown labeled icon button" config={ctrl.config}>
+        <input name={ctrl.name} type="hidden" value={props.value} />
         <i class="filter icon"></i>
         <span class="text">{ctrl.label}</span>
         <div class="menu">
