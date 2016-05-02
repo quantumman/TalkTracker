@@ -26,11 +26,18 @@ class ViewModel extends BaseViewModel {
                         .then(this.messages);
     this.param = {
       t: m.route.param('t'),
+      s: m.route.param('s'),
     };
   }
 
   onChangeTagFilter(value, _text, _$choice) {
     const param = assign({}, m.route.param(), { page: 1, t: value });
+    const route = m.route();
+    m.route(route, param);
+  }
+
+  onChangeSort(value, _text, _$choice) {
+    const param = assign({}, m.route.param(), { page: 1, s: value });
     const route = m.route();
     m.route(route, param);
   }
@@ -54,12 +61,23 @@ export default {
                 <div class="right menu">
                   <a class="ui item">
                     <Dropdown label="Tags"
+                              icon="filter"
                               search={{ placeholder: 'Search Tags...' }}
                               value={ctrl.param.t}
                               onchange={ctrl.onChangeTagFilter}
                     >
                       <Item text="Important" color="red" />
                       <Item text="Text" color="green" />
+                    </Dropdown>
+                  </a>
+                  <a class="ui item">
+                    <Dropdown label="Sort"
+                              icon="dropdown"
+                              value={ctrl.param.s}
+                              onchange={ctrl.onChangeSort}
+                    >
+                      <Item text="Newest" />
+                      <Item text="Oldest" />
                     </Dropdown>
                   </a>
                 </div>
