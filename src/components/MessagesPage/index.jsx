@@ -54,7 +54,7 @@ export default {
                 <div class="right menu">
                   <a class="ui item">
                     <Dropdown label="Tags"
-                              placeholder="Search Tags..."
+                              search={{ placeholder: 'Search Tags...' }}
                               value={ctrl.param.t}
                               onchange={ctrl.onChangeTagFilter}
                     >
