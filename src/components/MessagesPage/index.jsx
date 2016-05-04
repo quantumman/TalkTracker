@@ -58,6 +58,7 @@ export default {
         <div class="messages-page">
           <div class="ui grid">
             <div class="column">
+              <button class="ui primary button">Post a new message</button>
               <div class="ui top attached menu">
                 <div class="right menu">
                   <a class="ui item">
