@@ -11,6 +11,7 @@ export default {
       label: props.label,
       name: props.name,
       value: props.value,
+      icon: props.icon,
       search: assign({}, defaultSeachProp, props.search),
 
       config: (element, isInitialized) => {
@@ -27,7 +28,11 @@ export default {
     return (
       <div class="ui floating pointing dropdown labeled icon button" config={ctrl.config}>
         <input name={ctrl.name} type="hidden" value={ctrl.value} />
-        <i class="filter icon"></i>
+        {
+          typeof(ctrl.icon) !== 'undefined'
+          ? <i class={`${ctrl.icon} icon`}></i>
+          : ''
+        }
         <span class="text">{ctrl.label}</span>
         <div class="menu">
           {
