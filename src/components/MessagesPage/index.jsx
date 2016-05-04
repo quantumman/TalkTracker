@@ -20,14 +20,15 @@ class ViewModel extends BaseViewModel {
   }
 
   init() {
-    this.pageNumber(parseInt(m.route.param('page') || '1', 10));
-    this.messages = this.current
-                        .then(p => Project.messages(p, this.pageNumber))
-                        .then(this.messages);
     this.param = {
       t: m.route.param('t'),
       s: m.route.param('s'),
+      page: m.route.param('page'),
     };
+    this.pageNumber(parseInt(this.param.page || '1', 10));
+    this.messages = this.current
+                        .then(p => Project.messages(p, this.param))
+                        .then(this.messages);
   }
 
   onChangeTagFilter(value, _text, _$choice) {
