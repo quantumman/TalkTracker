@@ -88,7 +88,11 @@ export default {
               <div class="ui relaxed divided items segment bottom attached">
                 {
                   ctrl.messages().data.map(message =>
-                    <a class="item" key={m.id}>
+                    <a class="item"
+                       key={m.id}
+                       href={`/${ctrl.current().id}/messages/${message.id}`}
+                       config={m.route}
+                    >
                       <img class="ui tiny image" src={message.creator.avatar} />
                       <div class="middle aligned content">
                         <div class="header">
