@@ -85,12 +85,12 @@ export default {
                 </div>
               </div>
 
-              <div class="ui list relaxed divided segment bottom attached">
+              <div class="ui relaxed divided items segment bottom attached">
                 {
                   ctrl.messages().data.map(message =>
                     <a class="item" key={m.id}>
-                      <img class="ui avatar image" src={message.creator.avatar} />
-                      <div class="content">
+                      <img class="ui tiny image" src={message.creator.avatar} />
+                      <div class="middle aligned content">
                         <div class="header">
                           {message.title}
                         </div>
