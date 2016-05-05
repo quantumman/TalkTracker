@@ -2,10 +2,18 @@ import './style.scss';
 
 import BasePage from '../BasePage';
 
+import Message from '../../models/Message';
+
 import BaseViewModel from '../BaseViewModel';
 
 class ViewModel extends BaseViewModel {
   init() {
+    this.param = {
+      projectId: m.route.param('project_id'),
+      id: m.route.param('id'),
+    };
+
+    this.message = Message.retrieve(this.param);
   }
 }
 
