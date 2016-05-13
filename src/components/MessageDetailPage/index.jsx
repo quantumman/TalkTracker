@@ -30,6 +30,9 @@ export default {
     return (
       <BasePage {...ctrl}>
         <div class="message-detail-page">
+          <div class="header">
+            <h1>{ctrl.message().title}</h1>
+          </div>
           <Timeline comments={ctrl.message().comments} />
         </div>
       </BasePage>
