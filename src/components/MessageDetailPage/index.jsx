@@ -1,6 +1,7 @@
 import './style.scss';
 
 import BasePage from '../BasePage';
+import Timeline from '../ui/Timeline';
 
 import Message from '../../models/Message';
 
@@ -29,6 +30,7 @@ export default {
     return (
       <BasePage {...ctrl}>
         <div class="message-detail-page">
+          <Timeline comments={ctrl.message().comments} />
         </div>
       </BasePage>
     );
