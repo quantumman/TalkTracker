@@ -16,6 +16,15 @@ class ViewModel extends BaseViewModel {
 
     this.message = Message.retrieve(this.param);
   }
+
+  get labelColor() {
+    const stateTable = {
+      open: 'green',
+      closed: 'red',
+    };
+
+    return stateTable[this.message().state];
+  }
 }
 
 const vm = new ViewModel();
