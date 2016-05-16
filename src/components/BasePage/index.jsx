@@ -11,8 +11,8 @@ export default {
     return (
       <div class="base-page">
         <Nav {...props}>
-          <div class="ui grid">
-            <div class="two wide column">
+          <div class="ui centered grid">
+            <div class="menu">
             {
               props.hideIconMenuList
               ? <span />
