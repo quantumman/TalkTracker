@@ -19,7 +19,7 @@ export default {
               : <IconMenuList {...props} />
             }
             </div>
-            <div class="fourteen wide stretch column">
+            <div class="twelve wide stretch column">
               {children}
             </div>
           </div>
