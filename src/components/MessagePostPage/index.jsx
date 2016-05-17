@@ -17,9 +17,9 @@ export default {
     return vm;
   },
 
-  view() {
+  view(ctrl) {
     return (
-      <BasePage>
+      <BasePage {...ctrl}>
         <div class="message-post-page">
         </div>
       </BasePage>
