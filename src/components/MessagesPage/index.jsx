@@ -59,6 +59,8 @@ export default {
           <div class="ui grid">
             <div class="column">
               <a class="ui primary button"
+                 href={`/${ctrl.current().id}/messages/new`}
+                 config={m.route}
               >
                 Post a new message
               </a>
