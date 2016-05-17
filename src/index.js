@@ -14,7 +14,7 @@ const routes = {
   '/': ProjectsPage,
   '/:project_id/activity': ActivityPage,
   '/:project_id/messages': MessagesPage,
-  '/:project_id/messages/:message_id/edit': MessagePostPage,
+  '/:project_id/messages/new': MessagePostPage,
   '/:project_id/tasks': TasksPage,
   '/:project_id/setting': SettingPage,
 };
