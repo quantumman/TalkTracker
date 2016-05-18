@@ -50,7 +50,9 @@ export default {
                    placeholder="Write the headline of this message..."
                    class="headline" />
             {editorMenu}
-            <textarea class="comment" />
+            <textarea class="comment"
+                      placeholder="Type your message"
+            />
           </form>
         </div>
       </BasePage>
