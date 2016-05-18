@@ -1,6 +1,7 @@
 import './style.scss';
 
 import BasePage from '../BasePage';
+import Icon from '../ui/Icon';
 
 import BaseViewModel from '../BaseViewModel';
 
@@ -13,45 +14,23 @@ const vm = new ViewModel();
 
 const editorMenu = (
   <div class="ui icon menu">
-    <a class="item">
-      <i class="bold icon"></i>
-    </a>
-    <a class="item">
-      <i class="italic icon"></i>
-    </a>
-    <a class="item">
-      <i class="strikethrough icon"></i>
-    </a>
-    <a class="item">
-      <i class="linkify icon"></i>
-    </a>
+    <Icon icon="bold" tooltip="Bold" />
+    <Icon icon="italic" tooltip="Italic" />
+    <Icon icon="strikethrough" tooltip="Strikethrough" />
+    <Icon icon="linkify" tooltip="Linkify" />
 
-    <div class="item">
-    </div>
+    <div class="item"></div>
 
-    <a class="item">
-      <i class="quote right icon"></i>
-    </a>
-    <a class="item">
-      <i class="code icon"></i>
-    </a>
-    <a class="item">
-      <i class="list icon"></i>
-    </a>
-    <a class="item">
-      <i class="ordered list icon"></i>
-    </a>
-    <a class="item">
-      <i class="outdent icon"></i>
-    </a>
+    <Icon icon="quote right" tooltip="Quote" />
+    <Icon icon="code" tooltip="Code" />
+    <Icon icon="list" tooltip="List" />
+    <Icon icon="ordered list" tooltip="Ordered List" />
+    <Icon icon="indent" tooltip="Indent" />
+    <Icon icon="outdent" tooltip="Outdent" />
 
     <div class="right menu">
-      <a class="item">
-        <i class="arrow left icon"></i>
-      </a>
-      <a class="item">
-        <i class="arrow right icon"></i>
-      </a>
+      <Icon icon="arrow left" tooltip="Undo" />
+      <Icon icon="arrow right" tooltip="Redo" />
     </div>
   </div>
 );
