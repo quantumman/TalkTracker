@@ -68,6 +68,7 @@ export default {
         <div class="message-post-page">
           <form class="ui form segment">
             <input type="text" />
+            {editorMenu}
             <textarea class="comment" />
           </form>
         </div>
