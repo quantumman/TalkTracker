@@ -46,7 +46,9 @@ export default {
       <BasePage {...ctrl}>
         <div class="message-post-page">
           <form class="ui form segment">
-            <input type="text" />
+            <input type="text"
+                   placeholder="Write the headline of this message..."
+                   class="headline" />
             {editorMenu}
             <textarea class="comment" />
           </form>
