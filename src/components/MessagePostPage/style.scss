@@ -5,12 +5,16 @@
     }
     .comment {
         resize: none !important;
-        height: 100%;
+        height: 50em !important;
         font-size: 1.3em !important;
     }
 
     .headline {
         height: 2em !important;
         font-size: 2em !important;
+    }
+
+    .form {
+        height: 50em;
     }
 }
