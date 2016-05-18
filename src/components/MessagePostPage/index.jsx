@@ -21,6 +21,10 @@ export default {
     return (
       <BasePage {...ctrl}>
         <div class="message-post-page">
+          <form class="ui form segment">
+            <input type="text" />
+            <textarea class="comment" />
+          </form>
         </div>
       </BasePage>
     );

@@ -1,2 +1,9 @@
 .message-post-page {
+    input, textarea {
+        outline: none !important;
+        border: none !important;
+    }
+    .comment {
+        resize: none !important;
+    }
 }
