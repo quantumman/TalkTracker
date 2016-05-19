@@ -1,4 +1,5 @@
 import './style.scss';
+import 'trix/dist/trix.js';
 
 import BasePage from '../BasePage';
 import Icon from '../ui/Icon';
@@ -50,9 +51,8 @@ export default {
                    placeholder="Write the headline of this message..."
                    class="headline" />
             {editorMenu}
-            <textarea class="comment"
-                      placeholder="Type your message"
-            />
+            <input id="x" type="hidden" name="content" />
+            <trix-editor input="x" config={ctrl.config}></trix-editor>
           </form>
         </div>
       </BasePage>
