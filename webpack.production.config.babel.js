@@ -39,6 +39,10 @@ module.exports = {
     loaders: [
       // ES6 transpiler
       {
+        test: /trix\.js/,
+        loader: 'script',
+      },
+      {
         test: /\.jsx?$/,
         loader: 'babel',
         exclude: /(node_modules|bower_components)/,
