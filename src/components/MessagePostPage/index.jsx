@@ -7,15 +7,31 @@ import Icon from '../ui/Icon';
 import BaseViewModel from '../BaseViewModel';
 
 class ViewModel extends BaseViewModel {
+  constructor() {
+    super();
+
+    this.init = this.init.bind(this);
+    this.toggleAttr = this.toggleAttr.bind(this);
+    this.config = this.config.bind(this);
+  }
+
   init() {
+  }
+
+  toggleAttr(attribute) {
+    return _e => this.element.editor.activateAttribute(attribute);
+  }
+
+  config(element, _isInitialized) {
+    this.element = element;
   }
 }
 
 const vm = new ViewModel();
 
-const editorMenu = (
+const editorMenu = ctrl => (
   <div class="ui icon menu">
-    <Icon icon="bold" tooltip="Bold" />
+    <Icon icon="bold" tooltip="Bold" onclick={ctrl.toggleAttr('bold')} />
     <Icon icon="italic" tooltip="Italic" />
     <Icon icon="strikethrough" tooltip="Strikethrough" />
     <Icon icon="linkify" tooltip="Linkify" />
@@ -50,7 +66,7 @@ export default {
             <input type="text"
                    placeholder="Write the headline of this message..."
                    class="headline" />
-            {editorMenu}
+            {editorMenu(ctrl)}
             <input id="x" type="hidden" name="content" />
             <trix-editor input="x" config={ctrl.config}></trix-editor>
           </form>

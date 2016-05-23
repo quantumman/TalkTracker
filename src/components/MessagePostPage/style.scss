@@ -18,7 +18,30 @@
         height: 50em;
     }
 
-    button {
-	display: none;
+    trix-toolbar .button_group button.bold:before {
+	background-image: none !important;
+	content: '\F032';
+	font-size: 1em !important;
+	color: #000;
+	text-align: center;
+    }
+
+
+    trix-toolbar .button_group button.bold {
+	color: transparent;
+	display: inline-block;
+	opacity: 1;
+	margin: 0 .25rem 0 0;
+	font-family: Icons;
+	font-style: normal;
+	font-weight: 400;
+	text-decoration: inherit;
+	text-align: center;
+	speak: none;
+	font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden
     }
 }
