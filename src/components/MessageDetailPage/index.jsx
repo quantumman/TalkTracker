@@ -25,6 +25,11 @@ class ViewModel extends BaseViewModel {
 
     return stateTable[this.message().state];
   }
+
+  get createdWhen() {
+    // TODO format text like '10 minutes ago'
+    return this.message().created_at;
+  }
 }
 
 const vm = new ViewModel();
@@ -44,7 +49,9 @@ export default {
             <div class={`ui ${ctrl.labelColor} label`}>
               {ctrl.message().state}
             </div>
-            <div>{ctrl.message().creator}</div>
+            <div class="creator">
+              {ctrl.message().creator.name} posted {ctrl.createdWhen}
+            </div>
           </div>
           <Timeline comments={ctrl.message().comments} />
         </div>
