@@ -41,6 +41,10 @@ export default {
         <div class="message-detail-page">
           <div class="header">
             <h1>{ctrl.message().title}</h1>
+            <div class={`ui ${ctrl.labelColor} label`}>
+              {ctrl.message().state}
+            </div>
+            <div>{ctrl.message().creator}</div>
           </div>
           <Timeline comments={ctrl.message().comments} />
         </div>
