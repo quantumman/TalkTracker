@@ -54,6 +54,9 @@ export default {
             </div>
           </div>
           <Timeline comments={ctrl.message().comments} />
+          <form class="editor-area">
+            <textarea cols="110" rows="20" />
+          </form>
         </div>
       </BasePage>
     );
