@@ -24,7 +24,7 @@ export default {
   view(_ctrl, props) {
     return (
       <div class="icon-menu-list">
-        <div class="ui vertical labeled icon menu">
+        <div class="ui compact icon menu">
           <Anchor label="Activity" action="activity" {...props}>
             <i class="line chart icon" />
           </Anchor>

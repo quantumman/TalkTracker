@@ -1,0 +1,14 @@
+.message-detail-page {
+    .header {
+        margin-bottom: 2em;
+
+        .creator {
+            display: inline-block;
+            margin-left: 1em;
+        }
+    }
+
+    .editor-area {
+        resize: none;
+    }
+}

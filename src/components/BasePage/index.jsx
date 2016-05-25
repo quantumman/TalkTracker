@@ -11,15 +11,15 @@ export default {
     return (
       <div class="base-page">
         <Nav {...props}>
-          <div class="ui grid">
-            <div class="two wide column">
+          <div class="ui centered grid">
+            <div class="menu">
             {
               props.hideIconMenuList
               ? <span />
               : <IconMenuList {...props} />
             }
             </div>
-            <div class="fourteen wide stretch column">
+            <div class="twelve wide stretch column">
               {children}
             </div>
           </div>

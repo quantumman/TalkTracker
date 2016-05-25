@@ -1,0 +1,13 @@
+.callout {
+    .callout--left:before {
+        position: absolute;
+        content: "";
+        border: 5px solid transparent;
+        border-right: 17px solid #E8E8E8;
+        border-left: 10px solid transparent;
+        border-top: 5px solid transparent;
+        border-bottom: 5px solid transparent;
+        margin-left: -3.2em;
+        margin-top: -0.2em;
+    }
+}
